@@ -30,6 +30,6 @@ $ docker-compose up -d
 
 ```
 $ docker exec -it rpi_mysql mysql -e <command> -u root -p
-$ docker exec -it rpi_mysql mysql -e /bin/sh -c /etc/mysql/scripts/<path> -u root -p
+$ docker exec -it rpi_mysql mysql -e 'source /etc/mysql/scripts/<path>' -u root -p
 ```
 
