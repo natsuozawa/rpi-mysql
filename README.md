@@ -26,10 +26,22 @@ Otherwise, run:
 $ docker-compose up -d
 ```
 
+To connect to the mysql instance using the mysql command, run:
+
+```
+$ ./connect.sh
+```
+
+NOTE: In order to be able to use the shell scripts, add the execution permission.
+
+```
+$ sudo chmod +x *.sh
+```
+
 # Execute SQL command or script
 
 ```
 $ docker exec -it rpi_mysql mysql -e <command> -u root -p
-$ docker exec -it rpi_mysql mysql -e 'source /etc/mysql/scripts/<path>' -u root -p
+$ run_sql /scripts/<path>.sql
 ```
 
