@@ -4,7 +4,7 @@ services:
     image: rpi_mysql:latest
     restart: always
     ports:
-      - "3306-3406:3306"
+      - "3307-3406:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
 
