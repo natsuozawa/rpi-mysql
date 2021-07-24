@@ -1,15 +1,10 @@
 version: "3"
 services:
   db:
-    container_name: rpi_mysql
-    image: biarms/mysql:5.7
+    image: rpi_mysql:latest
     restart: always
     ports:
-      - "3306:3306"
+      - "3306-3406:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-    volumes:
-      - "./config:/etc/mysql/conf.d"
-      - "${MYSQL_DATA_DIR}:/var/lib/mysql"
-      - "./scripts:/etc/mysql/scripts"
 

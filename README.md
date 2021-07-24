@@ -6,14 +6,15 @@ This will create a MySQL 5.7 container (which runs on arm32v7, arm64v8, and amd6
 
 # Installation
 
-1. Configure the `MYSQL_ROOT_PASSWORD` and `MYSQL_DATA_DIR` environment variables. The latter is the path at which the MySQL data is mounted on the host system.
+1. Configure the `MYSQL_ROOT_PASSWORD` environment variable.
 2. Place any configurations as .cnf files under `config`. The directory will be mounted to `/etc/mysql/conf.d`.
-3. Place any scripts to run inside the container under `scripts`. Make sure they can be run. `sudo chmod 755 ./scripts/<path>`
+3. Place any scripts to run inside the container under `scripts`.
 
 Then, run:
 
 ```
-$ docker-compose up --build
+$ docker build -t rpi_mysql .
+$ docker-compose up -d
 ```
 
 # Start
