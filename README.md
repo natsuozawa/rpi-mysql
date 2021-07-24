@@ -13,6 +13,7 @@ This will create a MySQL 5.7 container (which runs on arm32v7, arm64v8, and amd6
 Then, run:
 
 ```
+$ docker build -t rpi_mysql .
 $ docker-compose up -d
 ```
 
