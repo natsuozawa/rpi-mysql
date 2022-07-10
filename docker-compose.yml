@@ -7,4 +7,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    volumes:
+      - ./config:/etc/mysql/conf.d
+      - ./scripts:/etc/mysql/scripts
+      - ./scripts/init:/docker-entrypoint-initdb.d
 
